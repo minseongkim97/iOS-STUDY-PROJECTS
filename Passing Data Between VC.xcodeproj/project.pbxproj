@@ -13,6 +13,7 @@
 		24D7EC8026263A8C00C1D275 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D7EC7E26263A8C00C1D275 /* Main.storyboard */; };
 		24D7EC8226263A8D00C1D275 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24D7EC8126263A8D00C1D275 /* Assets.xcassets */; };
 		24D7EC8526263A8D00C1D275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D7EC8326263A8D00C1D275 /* LaunchScreen.storyboard */; };
+		24D7EC8D26263AB800C1D275 /* SecondCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D7EC8C26263AB800C1D275 /* SecondCustomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		24D7EC8126263A8D00C1D275 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24D7EC8426263A8D00C1D275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24D7EC8626263A8D00C1D275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24D7EC8C26263AB800C1D275 /* SecondCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCustomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				24D7EC7826263A8C00C1D275 /* AppDelegate.swift */,
 				24D7EC7A26263A8C00C1D275 /* SceneDelegate.swift */,
 				24D7EC7C26263A8C00C1D275 /* ViewController.swift */,
+				24D7EC8C26263AB800C1D275 /* SecondCustomViewController.swift */,
 				24D7EC7E26263A8C00C1D275 /* Main.storyboard */,
 				24D7EC8126263A8D00C1D275 /* Assets.xcassets */,
 				24D7EC8326263A8D00C1D275 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				24D7EC7D26263A8C00C1D275 /* ViewController.swift in Sources */,
 				24D7EC7926263A8C00C1D275 /* AppDelegate.swift in Sources */,
+				24D7EC8D26263AB800C1D275 /* SecondCustomViewController.swift in Sources */,
 				24D7EC7B26263A8C00C1D275 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
