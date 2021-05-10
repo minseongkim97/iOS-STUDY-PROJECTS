@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     var model = [Section]()
     
     var filteredArr: [Any] = []
- 
+    
     let searchController = UISearchController(searchResultsController: nil)
     
     var isFiltering: Bool {
@@ -48,10 +48,9 @@ class ViewController: UIViewController {
         searchController.searchResultsUpdater = self
         searchController.searchBar.placeholder = "검색"
         self.navigationItem.searchController = searchController
-//        searchController.delegate = self
-        
         
 //        searchController.obscuresBackgroundDuringPresentation = false
+        
     }
     
 }
@@ -74,6 +73,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        // filter 상황인가 아닌가 구분
         if isFiltering {
             let model = self.filteredArr[indexPath.row]
             if model is Data {
@@ -145,8 +145,6 @@ extension ViewController: UISearchResultsUpdating {
         
         filteredArr = []
         
-        print(text)
-        
         for section in K.model {
             for dataIndex in 0..<section.data.count {
                 let model = section.data[dataIndex]
@@ -172,5 +170,3 @@ extension ViewController: UISearchResultsUpdating {
     }
 }
 
-    
-    

@@ -64,6 +64,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="button" destination="oqw-GX-3a5" id="4iG-hb-BFG"/>
                 <outlet property="iconBackgroundImage" destination="JwA-84-0QJ" id="q5p-7k-zGM"/>
                 <outlet property="iconImage" destination="TPr-Wy-Cdn" id="3ZN-k8-U1m"/>
                 <outlet property="title" destination="vJL-hF-cZt" id="Wwg-Yv-8ZR"/>
