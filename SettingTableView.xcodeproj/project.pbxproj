@@ -19,6 +19,8 @@
 		24E277C8264949DB00CBFB2A /* SettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E277C7264949DB00CBFB2A /* SettingData.swift */; };
 		24E277CF2649621400CBFB2A /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E277CD2649621400CBFB2A /* SwitchTableViewCell.swift */; };
 		24E277D02649621400CBFB2A /* SwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E277CE2649621400CBFB2A /* SwitchTableViewCell.xib */; };
+		24E277D3264983C000CBFB2A /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E277D1264983C000CBFB2A /* FilterTableViewCell.swift */; };
+		24E277D4264983C000CBFB2A /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E277D2264983C000CBFB2A /* FilterTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		24E277C7264949DB00CBFB2A /* SettingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingData.swift; sourceTree = "<group>"; };
 		24E277CD2649621400CBFB2A /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		24E277CE2649621400CBFB2A /* SwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchTableViewCell.xib; sourceTree = "<group>"; };
+		24E277D1264983C000CBFB2A /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		24E277D2264983C000CBFB2A /* FilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 				24E277B02649327B00CBFB2A /* Main.storyboard */,
 				24E277CE2649621400CBFB2A /* SwitchTableViewCell.xib */,
 				24E277C4264934E600CBFB2A /* SettingTableViewCell.xib */,
+				24E277D2264983C000CBFB2A /* FilterTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 				24E277AE2649327B00CBFB2A /* ViewController.swift */,
 				24E277C3264934E600CBFB2A /* SettingTableViewCell.swift */,
 				24E277CD2649621400CBFB2A /* SwitchTableViewCell.swift */,
+				24E277D1264983C000CBFB2A /* FilterTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24E277B72649327B00CBFB2A /* LaunchScreen.storyboard in Resources */,
+				24E277D4264983C000CBFB2A /* FilterTableViewCell.xib in Resources */,
 				24E277D02649621400CBFB2A /* SwitchTableViewCell.xib in Resources */,
 				24E277B42649327B00CBFB2A /* Assets.xcassets in Resources */,
 				24E277C6264934E600CBFB2A /* SettingTableViewCell.xib in Resources */,
@@ -186,6 +193,7 @@
 				24E277CF2649621400CBFB2A /* SwitchTableViewCell.swift in Sources */,
 				24E277AB2649327B00CBFB2A /* AppDelegate.swift in Sources */,
 				24E277AD2649327B00CBFB2A /* SceneDelegate.swift in Sources */,
+				24E277D3264983C000CBFB2A /* FilterTableViewCell.swift in Sources */,
 				24E277C8264949DB00CBFB2A /* SettingData.swift in Sources */,
 				24E277C1264932DF00CBFB2A /* Data.swift in Sources */,
 			);

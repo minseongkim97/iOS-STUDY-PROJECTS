@@ -19,32 +19,39 @@ class ViewController: UIViewController {
             self.tableView.separatorInset.left = 63
             self.tableView.register(UINib(nibName: "SettingTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingTableViewCell")
             self.tableView.register(UINib(nibName: "SwitchTableViewCell", bundle: nil), forCellReuseIdentifier: "SwitchTableViewCell")
+            self.tableView.register(UINib(nibName: "FilterTableViewCell", bundle: nil), forCellReuseIdentifier: "FilterTabelViewCell")
         }
     }
     
     
     
     var model = [Section]()
-//    var filteredArr: [] = []
-//    var isFiltering: Bool {
-//        let searchController = self.navigationItem.searchController
-//        let isActive = searchController?.isActive ?? false
-//        let isSearchBarHasText = searchController?.searchBar.text?.isEmpty == false
-//        return isActive && isSearchBarHasText
-//
-//    }
     
-
+    var filteredArr: [Any] = []
+ 
     let searchController = UISearchController(searchResultsController: nil)
+    
+    var isFiltering: Bool {
+        let searchController = self.navigationItem.searchController
+        let isActive = searchController?.isActive ?? false
+        let isSearchBarHasText = searchController?.searchBar.text?.isEmpty == false
+        return isActive && isSearchBarHasText
+
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // searchController를 네비게이션바 안에 넣기(네비게이션 아이템으로 넣기)
         
+        searchController.searchResultsUpdater = self
         searchController.searchBar.placeholder = "검색"
         self.navigationItem.searchController = searchController
-      
+//        searchController.delegate = self
+        
+        
+//        searchController.obscuresBackgroundDuringPresentation = false
     }
     
 }
@@ -58,22 +65,48 @@ extension ViewController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return K.model.count
+        return self.isFiltering ? 1 : K.model.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return K.model[section].data.count
+        return self.isFiltering ?  self.filteredArr.count : K.model[section].data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        if isFiltering {
+            let model = self.filteredArr[indexPath.row]
+            if model is Data {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "SettingTableViewCell", for: indexPath) as! SettingTableViewCell
+                
+                // cell data에 따라 변경
+                cell.title.text = (model as! Data).title
+                cell.iconImage.image = (model as! Data).icon
+                cell.iconBackgroundImage.backgroundColor = (model as! Data).iconBackgroundColor
+                
+                return cell
+                
+            } else if model is SwitchData {
+                
+                let cell = tableView.dequeueReusableCell(withIdentifier: "SwitchTableViewCell", for: indexPath) as! SwitchTableViewCell
+                
+                cell.title.text = (model as! SwitchData).title
+                cell.iconImage.image = (model as! SwitchData).icon
+                cell.iconBackgroundImage.backgroundColor = (model as! SwitchData).iconBackgroundColor
+                cell.switch.isOn = (model as! SwitchData).isOn
+                
+                return cell
+            }
+            
+        }
         let model = K.model[indexPath.section].data[indexPath.row]
         
         // switch 셀인지 static 셀인지에 따라 다르게 설정
-        switch model.self {
+        switch model.self{
         case .staticCell(let model):
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingTableViewCell", for: indexPath) as! SettingTableViewCell
             
+       
             // cell data에 따라 변경
             cell.title.text = model.title
             cell.iconImage.image = model.icon
@@ -91,6 +124,7 @@ extension ViewController: UITableViewDataSource {
             
             return cell
         }
+        
     }
 }
 
@@ -101,20 +135,42 @@ extension ViewController: UITableViewDelegate {
     }
 }
     
-//extension ViewController: UISearchResultsUpdating {
-//
-//    // text가 업데이트 될 때 마다 불리는 함수
-//    func updateSearchResults(for searchController: UISearchController) {
-//
-//        guard let text = searchController.searchBar.text?.lowercased() else { return }
-//
-//        self.filteredArr = self.arr.filter { $0.lowercased().hasPrefix(text) }
-//
-//        dump(filteredArr)
-//    }
-//}
+extension ViewController: UISearchResultsUpdating {
 
-    
-    
+
+    // text가 업데이트 될 때 마다 불리는 함수
+    func updateSearchResults(for searchController: UISearchController) {
+
+        guard let text = searchController.searchBar.text?.lowercased() else { return }
+        
+        filteredArr = []
+        
+        print(text)
+        
+        for section in K.model {
+            for dataIndex in 0..<section.data.count {
+                let model = section.data[dataIndex]
+
+                switch model.self {
+                case .staticCell(let model):
+                    if model.title.lowercased().contains(text) {
+                        self.filteredArr.append(model)
+                    }
+                case .switchCell(let model):
+                    if model.title.lowercased().contains(text) {
+                        self.filteredArr.append(model)
+                    }
+                }
+
+            }
+        }
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        
+    }
+}
+
     
     
