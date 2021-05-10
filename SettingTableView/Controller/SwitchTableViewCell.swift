@@ -1,5 +1,5 @@
 //
-//  SettingTableViewCell.swift
+//  SwitchTableViewCell.swift
 //  SettingTableView
 //
 //  Created by MIN SEONG KIM on 2021/05/10.
@@ -7,11 +7,12 @@
 
 import UIKit
 
-class SettingTableViewCell: UITableViewCell {
+class SwitchTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var `switch`: UISwitch!
     @IBOutlet weak var iconBackgroundImage: UIView!
+    @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var title: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +23,7 @@ class SettingTableViewCell: UITableViewCell {
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
+        
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
