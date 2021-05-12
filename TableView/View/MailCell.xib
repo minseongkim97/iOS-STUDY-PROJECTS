@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="85" id="KGk-i7-Jjw" customClass="MailCell" customModule="TableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="389" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="389" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+82 33-760-2700" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wo-4i-Uxu">
+                        <rect key="frame" x="76" y="8" width="157.5" height="21.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bfy-eT-Lct">
+                        <rect key="frame" x="8" y="8.5" width="60" height="59"/>
+                        <color key="tintColor" systemColor="systemGrayColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="OFS-1C-wnu"/>
+                            <constraint firstAttribute="height" constant="60" id="RNO-Xt-H5w"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BNw-C2-27A">
+                        <rect key="frame" x="319.5" y="8" width="61.5" height="22"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="금요일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwj-nd-A7I">
+                                <rect key="frame" x="0.0" y="0.0" width="39" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCa-2Z-lzQ">
+                                <rect key="frame" x="49" y="0.0" width="12.5" height="22"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" name="AccentColor"/>
+                                    <imageReference key="image" image="chevron.forward" catalog="system" symbolScale="medium"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="tintColor" name="AccentColor"/>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Q8-fN-Cxl">
+                        <rect key="frame" x="76" y="32" width="283" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bfy-eT-Lct" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="3Ag-76-EDD"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3Q8-fN-Cxl" secondAttribute="bottom" constant="8" id="45r-Sl-LOe"/>
+                    <constraint firstItem="8Wo-4i-Uxu" firstAttribute="leading" secondItem="bfy-eT-Lct" secondAttribute="trailing" constant="8" id="AzX-jD-VJf"/>
+                    <constraint firstAttribute="trailing" secondItem="3Q8-fN-Cxl" secondAttribute="trailing" constant="30" id="H1W-18-e1f"/>
+                    <constraint firstItem="8Wo-4i-Uxu" firstAttribute="top" secondItem="bfy-eT-Lct" secondAttribute="top" id="KQK-f7-y5q"/>
+                    <constraint firstItem="3Q8-fN-Cxl" firstAttribute="top" secondItem="BNw-C2-27A" secondAttribute="bottom" constant="2" id="cYJ-Tb-OWi"/>
+                    <constraint firstAttribute="bottom" secondItem="bfy-eT-Lct" secondAttribute="bottom" constant="8" id="hDm-2R-rgI"/>
+                    <constraint firstItem="BNw-C2-27A" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Wo-4i-Uxu" secondAttribute="trailing" constant="15" id="iKb-qZ-ijQ"/>
+                    <constraint firstItem="3Q8-fN-Cxl" firstAttribute="leading" secondItem="8Wo-4i-Uxu" secondAttribute="leading" id="k7G-w0-FlC"/>
+                    <constraint firstAttribute="trailing" secondItem="BNw-C2-27A" secondAttribute="trailing" constant="8" id="nKi-6w-Sy7"/>
+                    <constraint firstItem="bfy-eT-Lct" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="op1-tO-sD9"/>
+                    <constraint firstItem="BNw-C2-27A" firstAttribute="top" secondItem="bfy-eT-Lct" secondAttribute="top" id="raw-UA-Cci"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="messageContent" destination="3Q8-fN-Cxl" id="pJI-JI-Apx"/>
+                <outlet property="nameNumber" destination="8Wo-4i-Uxu" id="gjc-BK-Z4F"/>
+            </connections>
+            <point key="canvasLocation" x="-63.04347826086957" y="100.78125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
