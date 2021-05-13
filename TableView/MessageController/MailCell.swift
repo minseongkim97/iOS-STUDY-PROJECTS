@@ -9,8 +9,8 @@ import UIKit
 
 class MailCell: UITableViewCell {
 
-    @IBOutlet weak var nameNumber: UILabel!
-    @IBOutlet weak var messageContent: UILabel!
+    @IBOutlet private weak var nameNumber: UILabel!
+    @IBOutlet private weak var messageContent: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,4 +23,8 @@ class MailCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configure(nameNumber: String, messageContent: String) {
+        self.nameNumber.text = nameNumber
+        self.messageContent.text = messageContent
+    }
 }

@@ -7,8 +7,16 @@
 
 import Foundation
 
-struct Message {
-    static var message: [String] = ["hi", "뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해","자니","hi", "뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해","자니","hi", "뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해","자니"]
+enum Message {
+    static var message: [String] = ["hi",
+                                    "뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해",
+                                    "자니",
+                                    "hi",
+                                    "뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해",
+                                    "자니",
+                                    "hi",
+                                    "뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해뭐해",
+                                    "자니"]
     
-    static var name = ["apples","oranges","pears","apples","oranges","pears","apples","oranges","pears"]
+    static var name = ["apples", "oranges", "pears", "apples", "oranges", "pears", "apples", "oranges", "pears"]
 }

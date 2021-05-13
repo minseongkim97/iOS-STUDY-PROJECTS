@@ -9,12 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-
     var filteredName: [String] = []
     var filteredMessage: [String] = []
     let searchController = UISearchController(searchResultsController: nil)
-    
-   
     
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
@@ -33,7 +30,6 @@ class ViewController: UIViewController {
 //        }
 //    }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,33 +37,28 @@ class ViewController: UIViewController {
         
         searchController.searchBar.placeholder = "검색"
         self.navigationItem.searchController = searchController
+        searchController.obscuresBackgroundDuringPresentation = false
         
 //        // navigationbar 선없애기
 //        self.navigationController?.navigationBar.shadowImage = UIImage()
 //        self.navigationController?.navigationBar.isTranslucent = false
 
-      
-    
         filteredName = Message.name
         filteredMessage = Message.message
-     
-
     }
-
-
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! MailCell
-        cell.nameNumber.text = filteredName[indexPath.row]
-        cell.messageContent.text = filteredMessage[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as? MailCell else { fatalError("cell not found") }
         
+        cell.configure(nameNumber: filteredName[indexPath.row], messageContent: filteredMessage[indexPath.row])
+
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredName.count
+        filteredName.count
     }
     
 //    // swipe to delete
@@ -82,9 +73,7 @@ extension ViewController: UITableViewDataSource {
 //
 //        }
 //    }
-    
-    
-    
+//
 }
 
 extension ViewController: UITableViewDelegate {
@@ -95,25 +84,25 @@ extension ViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let pin = UIContextualAction(style: .normal, title: "Pin") { (UIContextualAction, UIView, success: @escaping (Bool) -> Void) in
+        let pin = UIContextualAction(style: .normal, title: "Pin") { (_, _, success: @escaping (Bool) -> Void) in
                     print("Pin Clicked")
                     success(true)
         }
         pin.backgroundColor = .orange
         pin.image = UIImage(systemName: "pin.fill")
         
-        return UISwipeActionsConfiguration(actions:[pin])
+        return UISwipeActionsConfiguration(actions: [pin])
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let alarm = UIContextualAction(style: .normal, title: "Alarm") { (UIContextualAction, UIView, succes: @escaping (Bool) -> Void) in
+        let alarm = UIContextualAction(style: .normal, title: "Alarm") { (_, _, succes: @escaping (Bool) -> Void) in
             print("Alarm Clicked")
             succes(true)
         }
         alarm.backgroundColor = .purple
         alarm.image = UIImage(systemName: "bell.slash.fill")
         
-        let delete = UIContextualAction(style: .normal, title: "delete") { (UIContextualAction, UIView, success: @escaping (Bool) -> Void) in
+        let delete = UIContextualAction(style: .normal, title: "delete") { (_, _, success: @escaping (Bool) -> Void) in
             self.filteredName.remove(at: indexPath.row)
             self.filteredMessage.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .fade)
@@ -122,17 +111,17 @@ extension ViewController: UITableViewDelegate {
         delete.backgroundColor = .red
         delete.image = UIImage(systemName: "trash.fill")
         
-        return UISwipeActionsConfiguration(actions: [delete,alarm])
+        return UISwipeActionsConfiguration(actions: [delete, alarm])
     }
     
-    // 셀 높이 지정해서 title이 같이 나오게 할 수 있음
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 80
-//    }
+//     셀 높이 지정해서 title이 같이 나오게 할 수 있음
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        100
+    }
 }
 
-//// 검색 기능
-//extension ViewController: UISearchBarDelegate {
+// 검색 기능
+// extension ViewController: UISearchBarDelegate {
 //    // 검색 창 안의 텍스트가 여기 안의 코드를 실행
 //    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 //
@@ -158,7 +147,7 @@ extension ViewController: UITableViewDelegate {
 //        }
 //
 //    }
-//}
+// }
 
 extension ViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
@@ -168,10 +157,9 @@ extension ViewController: UISearchResultsUpdating {
         // searchController의 searchBar
         guard let text = searchController.searchBar.text?.lowercased() else { return }
         
-        if text == "" {
+        if text.isEmpty {
             filteredName = Message.name
             filteredMessage = Message.message
-
         } else {
             for names in 0..<Message.name.count {
                 if Message.name[names].lowercased().contains(text.lowercased()) {
@@ -179,14 +167,9 @@ extension ViewController: UISearchResultsUpdating {
                     filteredMessage.append((Message.message[names]))
                 }
             }
-
-
         }
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-
     }
-    
-    
 }
