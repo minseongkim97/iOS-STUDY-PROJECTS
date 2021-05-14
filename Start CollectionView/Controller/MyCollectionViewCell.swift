@@ -27,16 +27,13 @@ class MyCollectionViewCell: UICollectionViewCell {
 //        backgroundColor = .systemBackground
     }
     
-    public func configure(with image: UIImage, text: String) {
+    func configure(with image: UIImage, text: String) {
         imageView.image = image
         label.text = text
         backgroundColor = .black
     }
     
     static func nib() -> UINib {
-        return UINib(nibName: "MyCollectionViewCell", bundle: nil)
+        UINib(nibName: "MyCollectionViewCell", bundle: nil)
     }
-    
-  
-
 }

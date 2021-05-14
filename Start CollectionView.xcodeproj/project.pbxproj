@@ -63,7 +63,7 @@
 				24C14825264E9B46007F0BEB /* AppDelegate.swift */,
 				24C14827264E9B46007F0BEB /* SceneDelegate.swift */,
 				24C14839264ED21B007F0BEB /* Controller */,
-				24C1483A264ED221007F0BEB /* VIEW */,
+				24C1483A264ED221007F0BEB /* View */,
 				24C1482E264E9B47007F0BEB /* Assets.xcassets */,
 				24C14830264E9B47007F0BEB /* LaunchScreen.storyboard */,
 				24C14833264E9B47007F0BEB /* Info.plist */,
@@ -80,13 +80,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		24C1483A264ED221007F0BEB /* VIEW */ = {
+		24C1483A264ED221007F0BEB /* View */ = {
 			isa = PBXGroup;
 			children = (
 				24C1482B264E9B46007F0BEB /* Main.storyboard */,
 				24C1483C264ED23E007F0BEB /* MyCollectionViewCell.xib */,
 			);
-			path = VIEW;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +99,7 @@
 				24C1481E264E9B46007F0BEB /* Sources */,
 				24C1481F264E9B46007F0BEB /* Frameworks */,
 				24C14820264E9B46007F0BEB /* Resources */,
+				24C1483F264EEB96007F0BEB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -154,6 +155,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24C1483F264EEB96007F0BEB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n  exit 1\n  fi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		24C1481E264E9B46007F0BEB /* Sources */ = {
@@ -312,6 +333,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Start CollectionView/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,6 +352,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Start CollectionView/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

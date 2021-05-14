@@ -15,17 +15,12 @@ class ViewController: UIViewController {
             self.collectionView.delegate = self
             self.collectionView.collectionViewLayout = UICollectionViewFlowLayout()
             self.collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
-            
         }
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -34,21 +29,18 @@ extension ViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCell.identifier, for: indexPath) as! MyCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCell.identifier, for: indexPath) as? MyCollectionViewCell else { fatalError("error") }
         
         // 셀 재사용 문제 예시
 //        if indexPath.row == 5 {
 //            cell.backgroundColor = .black
 //        }
         
-        
         // 셀 UI 설정
-        cell.configure(with: UIImage(systemName: "house")!, text: "custom \(indexPath.row)")
+        cell.configure(with: UIImage(systemName: "house") ?? UIImage(), text: "custom \(indexPath.row)")
         
         return cell
     }
-    
-    
 }
 
 extension ViewController: UICollectionViewDelegate {
@@ -56,7 +48,6 @@ extension ViewController: UICollectionViewDelegate {
         collectionView.deselectItem(at: indexPath, animated: true)
         print("you tapped row")
     }
-    
 }
 
 // custom layout collection view
@@ -64,7 +55,7 @@ extension ViewController: UICollectionViewDelegate {
 // cell 들이 기기의 가장자리쪽으로 붙게 된다 why?
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: collectionView.bounds.width/3-3, height: collectionView.bounds.width/3-3)
+        CGSize(width: collectionView.bounds.width / 3 - 3, height: collectionView.bounds.width / 3 - 3)
     }
     
     // 지정된 섹션의 여백을 반환하는 메서드.
@@ -81,5 +72,4 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         1
     }
-    
 }
