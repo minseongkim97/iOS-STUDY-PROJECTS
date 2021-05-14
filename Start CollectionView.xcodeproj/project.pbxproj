@@ -13,6 +13,8 @@
 		24C1482D264E9B46007F0BEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C1482B264E9B46007F0BEB /* Main.storyboard */; };
 		24C1482F264E9B47007F0BEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C1482E264E9B47007F0BEB /* Assets.xcassets */; };
 		24C14832264E9B47007F0BEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C14830264E9B47007F0BEB /* LaunchScreen.storyboard */; };
+		24C1483D264ED23E007F0BEB /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C1483B264ED23E007F0BEB /* MyCollectionViewCell.swift */; };
+		24C1483E264ED23E007F0BEB /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C1483C264ED23E007F0BEB /* MyCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		24C1482E264E9B47007F0BEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24C14831264E9B47007F0BEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24C14833264E9B47007F0BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24C1483B264ED23E007F0BEB /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		24C1483C264ED23E007F0BEB /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +62,31 @@
 			children = (
 				24C14825264E9B46007F0BEB /* AppDelegate.swift */,
 				24C14827264E9B46007F0BEB /* SceneDelegate.swift */,
-				24C14829264E9B46007F0BEB /* ViewController.swift */,
-				24C1482B264E9B46007F0BEB /* Main.storyboard */,
+				24C14839264ED21B007F0BEB /* Controller */,
+				24C1483A264ED221007F0BEB /* VIEW */,
 				24C1482E264E9B47007F0BEB /* Assets.xcassets */,
 				24C14830264E9B47007F0BEB /* LaunchScreen.storyboard */,
 				24C14833264E9B47007F0BEB /* Info.plist */,
 			);
 			path = "Start CollectionView";
+			sourceTree = "<group>";
+		};
+		24C14839264ED21B007F0BEB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				24C14829264E9B46007F0BEB /* ViewController.swift */,
+				24C1483B264ED23E007F0BEB /* MyCollectionViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		24C1483A264ED221007F0BEB /* VIEW */ = {
+			isa = PBXGroup;
+			children = (
+				24C1482B264E9B46007F0BEB /* Main.storyboard */,
+				24C1483C264ED23E007F0BEB /* MyCollectionViewCell.xib */,
+			);
+			path = VIEW;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +148,7 @@
 			files = (
 				24C14832264E9B47007F0BEB /* LaunchScreen.storyboard in Resources */,
 				24C1482F264E9B47007F0BEB /* Assets.xcassets in Resources */,
+				24C1483E264ED23E007F0BEB /* MyCollectionViewCell.xib in Resources */,
 				24C1482D264E9B46007F0BEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +162,7 @@
 			files = (
 				24C1482A264E9B46007F0BEB /* ViewController.swift in Sources */,
 				24C14826264E9B46007F0BEB /* AppDelegate.swift in Sources */,
+				24C1483D264ED23E007F0BEB /* MyCollectionViewCell.swift in Sources */,
 				24C14828264E9B46007F0BEB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
