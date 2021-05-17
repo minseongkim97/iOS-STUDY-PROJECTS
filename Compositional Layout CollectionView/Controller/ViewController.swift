@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     }
     
     func fetchPhotos(query: String) {
-        let urlString = "https://api.unsplash.com/search/photos?page=1&per_page=50&query=\(query)&client_id=CK_Ro_t52ivgmc4O2SmazOtOEJhVM3w-hUJlEEMh4nM"
+        let urlString = "https://api.unsplash.com/search/photos?page=1&per_page=50&query=\(query)&client_id={myid}"
         guard let url = URL(string: urlString) else { return }
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
             guard let data = data, error == nil else { return }
