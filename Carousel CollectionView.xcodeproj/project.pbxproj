@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		24760257265169EF004E24D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24760256265169EF004E24D1 /* AppDelegate.swift */; };
 		24760259265169EF004E24D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24760258265169EF004E24D1 /* SceneDelegate.swift */; };
-		2476025B265169EF004E24D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2476025A265169EF004E24D1 /* ViewController.swift */; };
+		2476025B265169EF004E24D1 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2476025A265169EF004E24D1 /* CarouselViewController.swift */; };
 		2476025E265169EF004E24D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2476025C265169EF004E24D1 /* Main.storyboard */; };
 		24760260265169F0004E24D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2476025F265169F0004E24D1 /* Assets.xcassets */; };
 		24760263265169F0004E24D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24760261265169F0004E24D1 /* LaunchScreen.storyboard */; };
+		2476026E26516B49004E24D1 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2476026C26516B49004E24D1 /* CollectionTableViewCell.swift */; };
+		2476026F26516B49004E24D1 /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2476026D26516B49004E24D1 /* CollectionTableViewCell.xib */; };
+		2476027226517C83004E24D1 /* TileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2476027026517C83004E24D1 /* TileCollectionViewCell.swift */; };
+		2476027326517C83004E24D1 /* TileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2476027126517C83004E24D1 /* TileCollectionViewCell.xib */; };
+		247602752652791F004E24D1 /* ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247602742652791F004E24D1 /* ViewModels.swift */; };
+		24760278265279DC004E24D1 /* CollectionTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24760277265279DC004E24D1 /* CollectionTableViewCellModel.swift */; };
+		2476027A265279F0004E24D1 /* TileCollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24760279265279F0004E24D1 /* TileCollectionViewCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		24760253265169EF004E24D1 /* Carousel CollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carousel CollectionView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24760256265169EF004E24D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24760258265169EF004E24D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2476025A265169EF004E24D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2476025A265169EF004E24D1 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		2476025D265169EF004E24D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2476025F265169F0004E24D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24760262265169F0004E24D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24760264265169F0004E24D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2476026C26516B49004E24D1 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		2476026D26516B49004E24D1 /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
+		2476027026517C83004E24D1 /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
+		2476027126517C83004E24D1 /* TileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TileCollectionViewCell.xib; sourceTree = "<group>"; };
+		247602742652791F004E24D1 /* ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels.swift; sourceTree = "<group>"; };
+		24760277265279DC004E24D1 /* CollectionTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCellModel.swift; sourceTree = "<group>"; };
+		24760279265279F0004E24D1 /* TileCollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +72,44 @@
 			children = (
 				24760256265169EF004E24D1 /* AppDelegate.swift */,
 				24760258265169EF004E24D1 /* SceneDelegate.swift */,
-				2476025A265169EF004E24D1 /* ViewController.swift */,
-				2476025C265169EF004E24D1 /* Main.storyboard */,
+				2476027626527923004E24D1 /* Model */,
+				2476026A26516AA9004E24D1 /* Controller */,
+				2476026B26516AAF004E24D1 /* View */,
 				2476025F265169F0004E24D1 /* Assets.xcassets */,
 				24760261265169F0004E24D1 /* LaunchScreen.storyboard */,
 				24760264265169F0004E24D1 /* Info.plist */,
 			);
 			path = "Carousel CollectionView";
+			sourceTree = "<group>";
+		};
+		2476026A26516AA9004E24D1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2476025A265169EF004E24D1 /* CarouselViewController.swift */,
+				2476026C26516B49004E24D1 /* CollectionTableViewCell.swift */,
+				2476027026517C83004E24D1 /* TileCollectionViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2476026B26516AAF004E24D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2476025C265169EF004E24D1 /* Main.storyboard */,
+				2476026D26516B49004E24D1 /* CollectionTableViewCell.xib */,
+				2476027126517C83004E24D1 /* TileCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2476027626527923004E24D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				247602742652791F004E24D1 /* ViewModels.swift */,
+				24760277265279DC004E24D1 /* CollectionTableViewCellModel.swift */,
+				24760279265279F0004E24D1 /* TileCollectionViewCellModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +122,7 @@
 				2476024F265169EF004E24D1 /* Sources */,
 				24760250265169EF004E24D1 /* Frameworks */,
 				24760251265169EF004E24D1 /* Resources */,
+				2476027B26528351004E24D1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -127,19 +173,46 @@
 				24760263265169F0004E24D1 /* LaunchScreen.storyboard in Resources */,
 				24760260265169F0004E24D1 /* Assets.xcassets in Resources */,
 				2476025E265169EF004E24D1 /* Main.storyboard in Resources */,
+				2476027326517C83004E24D1 /* TileCollectionViewCell.xib in Resources */,
+				2476026F26516B49004E24D1 /* CollectionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2476027B26528351004E24D1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n  exit 1\n  fi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2476024F265169EF004E24D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2476025B265169EF004E24D1 /* ViewController.swift in Sources */,
+				2476025B265169EF004E24D1 /* CarouselViewController.swift in Sources */,
+				2476027226517C83004E24D1 /* TileCollectionViewCell.swift in Sources */,
 				24760257265169EF004E24D1 /* AppDelegate.swift in Sources */,
+				24760278265279DC004E24D1 /* CollectionTableViewCellModel.swift in Sources */,
 				24760259265169EF004E24D1 /* SceneDelegate.swift in Sources */,
+				247602752652791F004E24D1 /* ViewModels.swift in Sources */,
+				2476027A265279F0004E24D1 /* TileCollectionViewCellModel.swift in Sources */,
+				2476026E26516B49004E24D1 /* CollectionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
