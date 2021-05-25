@@ -40,16 +40,23 @@ extension MovieViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier, for: indexPath) as? MovieTableViewCell else { fatalError("error") }
         
         let movie = movies[indexPath.row]
-        let imageURL = URL(string: movie.imageURL)
-        do {
-            let data = try Data(contentsOf: imageURL!)
-            cell.configure(poster: UIImage(data: data),
+        if let imageURL = URL(string: movie.imageURL) {
+            do {
+                let data = try Data(contentsOf: imageURL)
+                cell.configure(poster: UIImage(data: data),
+                               titleNPubdate: "\(movie.title.replacingOccurrences(of: "</b>", with: "").replacingOccurrences(of: "<b>", with: ""))(\(movie.pubDate))",
+                               rate: "평점 \(movie.userRating)",
+                               director: "감독 \(movie.director.replacingOccurrences(of: "|", with: "."))",
+                               actors: "출연 배우 \(movie.actors.replacingOccurrences(of: "|", with: "."))")
+            } catch {
+                fatalError()
+            }
+        } else {
+            cell.configure(poster: UIImage(systemName: "photo.on.rectangle.angled"),
                            titleNPubdate: "\(movie.title.replacingOccurrences(of: "</b>", with: "").replacingOccurrences(of: "<b>", with: ""))(\(movie.pubDate))",
                            rate: "평점 \(movie.userRating)",
-                           director: "감독 \(movie.director)",
-                           actors: "출연 배우 \(movie.actors)")
-        } catch {
-            fatalError()
+                           director: "감독 \(movie.director.replacingOccurrences(of: "|", with: "."))",
+                           actors: "출연 배우 \(movie.actors.replacingOccurrences(of: "|", with: "."))")
         }
 
         
