@@ -5,7 +5,7 @@
 //  Created by MIN SEONG KIM on 2021/05/25.
 //
 
-import Foundation
+import UIKit
 
 struct MovieApiResponse {
     let numberOfResults: Int
@@ -35,7 +35,7 @@ extension MovieApiResponse: Decodable {
 struct Movie {
     let title: String
     let link: String
-//    let image: UIImage
+    let imageURL: String
     let subtitle: String
     let pubDate: String
     let director: String
@@ -48,7 +48,7 @@ extension Movie: Decodable {
     enum MovieCodingKeys: String, CodingKey {
         case title
         case link
-//        case image
+        case imageURL = "image"
         case subtitle
         case pubDate
         case director
@@ -62,7 +62,7 @@ extension Movie: Decodable {
         
         title = try movieContainer.decode(String.self, forKey: .title)
         link = try movieContainer.decode(String.self, forKey: .link)
-//        image = try movieContainer.decode(UIImage.self, forKey: .image)
+        imageURL = try movieContainer.decode(String.self, forKey: .imageURL)
         subtitle = try movieContainer.decode(String.self, forKey: .subtitle)
         pubDate = try movieContainer.decode(String.self, forKey: .pubDate)
         director = try movieContainer.decode(String.self, forKey: .director)

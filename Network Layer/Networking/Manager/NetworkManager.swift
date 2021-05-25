@@ -24,8 +24,8 @@ enum Result<String>{
 
 struct NetworkManager {
     static let environment : NetworkEnvironment = .search
-    static let clientID = ""
-    static let clientSecret = ""
+    static let clientID = "7qvSWUXGr4u4_LWGUeZK"
+    static let clientSecret = "Uk_iPt0WuN"
     let router = Router<MovieApi>()
     
     func getNewMovies(word: String, completion: @escaping (_ movie: [Movie]?,_ error: String?)->()){

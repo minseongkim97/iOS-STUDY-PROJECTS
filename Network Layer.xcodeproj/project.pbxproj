@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2409B6F9265C439B008D383B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2409B6F8265C439B008D383B /* AppDelegate.swift */; };
 		2409B6FB265C439B008D383B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2409B6FA265C439B008D383B /* SceneDelegate.swift */; };
-		2409B6FD265C439B008D383B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2409B6FC265C439B008D383B /* ViewController.swift */; };
+		2409B6FD265C439B008D383B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2409B6FC265C439B008D383B /* SearchViewController.swift */; };
 		2409B700265C439B008D383B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2409B6FE265C439B008D383B /* Main.storyboard */; };
 		2409B702265C439C008D383B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2409B701265C439C008D383B /* Assets.xcassets */; };
 		2409B705265C439C008D383B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2409B703265C439C008D383B /* LaunchScreen.storyboard */; };
@@ -24,13 +24,16 @@
 		2409B72A265C450E008D383B /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2409B729265C450E008D383B /* ParameterEncoding.swift */; };
 		2409B72E265C4536008D383B /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2409B72D265C4536008D383B /* URLParameterEncoding.swift */; };
 		2409B730265C454C008D383B /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2409B72F265C454C008D383B /* JSONParameterEncoder.swift */; };
+		2409B734265C7289008D383B /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2409B733265C7289008D383B /* MovieViewController.swift */; };
+		2409B739265C749D008D383B /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2409B737265C749D008D383B /* MovieTableViewCell.swift */; };
+		2409B73A265C749D008D383B /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2409B738265C749D008D383B /* MovieTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2409B6F5265C439B008D383B /* Network Layer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Network Layer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2409B6F8265C439B008D383B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2409B6FA265C439B008D383B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2409B6FC265C439B008D383B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2409B6FC265C439B008D383B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2409B6FF265C439B008D383B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2409B701265C439C008D383B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2409B704265C439C008D383B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +49,9 @@
 		2409B729265C450E008D383B /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		2409B72D265C4536008D383B /* URLParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
 		2409B72F265C454C008D383B /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		2409B733265C7289008D383B /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		2409B737265C749D008D383B /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		2409B738265C749D008D383B /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +115,9 @@
 		2409B70E265C43E1008D383B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2409B6FC265C439B008D383B /* ViewController.swift */,
+				2409B6FC265C439B008D383B /* SearchViewController.swift */,
+				2409B733265C7289008D383B /* MovieViewController.swift */,
+				2409B737265C749D008D383B /* MovieTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,6 +184,7 @@
 		2409B715265C4419008D383B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2409B738265C749D008D383B /* MovieTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -247,6 +256,7 @@
 			files = (
 				2409B705265C439C008D383B /* LaunchScreen.storyboard in Resources */,
 				2409B702265C439C008D383B /* Assets.xcassets in Resources */,
+				2409B73A265C749D008D383B /* MovieTableViewCell.xib in Resources */,
 				2409B700265C439B008D383B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,14 +271,16 @@
 				2409B720265C44A6008D383B /* Router.swift in Sources */,
 				2409B71C265C4484008D383B /* NetworkManager.swift in Sources */,
 				2409B72E265C4536008D383B /* URLParameterEncoding.swift in Sources */,
-				2409B6FD265C439B008D383B /* ViewController.swift in Sources */,
+				2409B6FD265C439B008D383B /* SearchViewController.swift in Sources */,
 				2409B6F9265C439B008D383B /* AppDelegate.swift in Sources */,
 				2409B718265C442E008D383B /* Movie.swift in Sources */,
+				2409B739265C749D008D383B /* MovieTableViewCell.swift in Sources */,
 				2409B722265C44AC008D383B /* HTTPMethod.swift in Sources */,
 				2409B72A265C450E008D383B /* ParameterEncoding.swift in Sources */,
 				2409B724265C44B2008D383B /* HTTPTask.swift in Sources */,
 				2409B6FB265C439B008D383B /* SceneDelegate.swift in Sources */,
 				2409B71A265C446F008D383B /* MovieEndPoint.swift in Sources */,
+				2409B734265C7289008D383B /* MovieViewController.swift in Sources */,
 				2409B71E265C449D008D383B /* EndPointType.swift in Sources */,
 				2409B730265C454C008D383B /* JSONParameterEncoder.swift in Sources */,
 				2409B726265C44BD008D383B /* NetworkLogger.swift in Sources */,
